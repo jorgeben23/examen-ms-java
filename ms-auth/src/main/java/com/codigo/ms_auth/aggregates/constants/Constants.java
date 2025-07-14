@@ -13,10 +13,22 @@ public class Constants {
             "/api/auth/validate",
             "/actuator/**"
     };
-    public static final String ENDPOINTS_USER= "/api/auth/**";
-    public static final String ENDPOINTS_ADMIN = "/api/auth/**";
-    public static final String ENDPOINTS_SUPERADMIN = "/api/auth/**";
 
+    public static final String[] ENDPOINTS_SUPERADMIN = {
+            "/api/auth/signupadmin"
+    };
 
-    public static final String USER_ADMIN = "PRODRIGUEZ";
+    // accesibles por ADMIN y SUPERADMIN
+    public static final String[] ENDPOINTS_ADMIN = {
+            "/api/auth/signupuser",
+            "/api/auth/listar",
+            "/api/auth/all"
+    };
+
+    public static final String[] ENDPOINTS_USER = {
+            "/api/auth/saludar",
+            "/api/auth/refreshtoken"
+    };
+
+    public static final String USER_ADMIN = "JBENITES";
 }
