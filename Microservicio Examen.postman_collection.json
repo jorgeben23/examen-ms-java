@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "a6a2202b-3552-44d6-999e-6e82b0c4ef14",
+		"name": "Microservicio Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30721426"
+	},
+	"item": [
+		{
+			"name": "ms-varios",
+			"item": [
+				{
+					"name": "Ms Auth",
+					"item": [
+						{
+							"name": "Listar Usuarios",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIkFETUlOIl0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJpZCI6NSwidHlwZSI6ImFjY2VzcyIsImVuYWJsZWQiOnRydWUsImRuaSI6IjcwMzMwNDQ3IiwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwibm9tYnJlcyI6IkpoZXJzb24gQmVuaXRlcyIsInN1YiI6ImpoZXJzb24uYmVuMjVAZ21haWwuY29tIiwiaWF0IjoxNzUyNDcwMTM3LCJleHAiOjE3NTI0NzYxMzcsImRhdG9FeHRyYSI6MTIzNDU2fQ.Bq1RWFM2mhzlx-leC7NYxts53xqcP4sI9J0yEsfebZGkipsh9bjcjBOM60YG8PGyIFC8JlpSp0zRkczi3x0bVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:60752/api/auth/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "60752",
+									"path": [
+										"api",
+										"auth",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prueba Saludo",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIlVTVUFSSU8iXSwiYWNjb3VudE5vbkV4cGlyZWQiOnRydWUsImlkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZW5hYmxlZCI6dHJ1ZSwiZG5pIjoiNzAzMzA0NDgiLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJub21icmVzIjoiSm9yZ2UgQmVuaXRlcyIsInN1YiI6ImpvcmdlLmJlbjIzQGdtYWlsLmNvbSIsImlhdCI6MTc1MTUyMzYyMiwiZXhwIjoxNzUxNTI5NjIyLCJkYXRvRXh0cmEiOjEyMzQ1Nn0.eVEwNDTJOUMsqlsr-q-X8-9WqbDCaRhhBejvEVKvZnDZgHaYH3DIC6fkYKevfU-RXBups2qurKIaszmzrcWDgg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/auth/saludar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"saludar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Clave",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/auth/clave",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"clave"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "// USUARIO\r\n// {\r\n//     \"email\":\"jorge.ben23@gmail.com\",\r\n//     \"password\":\"jorge123\"\r\n// }\r\n\r\n// ADMIN\r\n{\r\n    \"email\":\"jherson.ben25@gmail.com\",\r\n    \"password\":\"jherson123\"\r\n}\r\n\r\n// SUPERADMIN\r\n// {\r\n//     \"email\":\"lian16@gmail.com\",\r\n//     \"password\":\"lian123\"\r\n// }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:60112/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "60112",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Lian Benites\",\r\n    \"email\": \"lian16@gmail.com\",\r\n    \"password\": \"lian123\",\r\n    \"rol\":\"SUPERADMIN\",\r\n    \"numDoc\": \"70330445\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIkFETUlOIl0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJpZCI6NSwidHlwZSI6ImFjY2VzcyIsImVuYWJsZWQiOnRydWUsImRuaSI6IjcwMzMwNDQ3IiwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwibm9tYnJlcyI6IkpoZXJzb24gQmVuaXRlcyIsInN1YiI6ImpoZXJzb24uYmVuMjVAZ21haWwuY29tIiwiaWF0IjoxNzUyNDcwMTM3LCJleHAiOjE3NTI0NzYxMzcsImRhdG9FeHRyYSI6MTIzNDU2fQ.Bq1RWFM2mhzlx-leC7NYxts53xqcP4sI9J0yEsfebZGkipsh9bjcjBOM60YG8PGyIFC8JlpSp0zRkczi3x0bVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:60752/api/auth/validate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "60752",
+									"path": [
+										"api",
+										"auth",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ms Prodcutos",
+					"item": [
+						{
+							"name": "prueba",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos/saludar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"saludar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registrar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIkFETUlOIl0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJpZCI6NSwidHlwZSI6ImFjY2VzcyIsImVuYWJsZWQiOnRydWUsImRuaSI6IjcwMzMwNDQ3IiwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwibm9tYnJlcyI6IkpoZXJzb24gQmVuaXRlcyIsInN1YiI6ImpoZXJzb24uYmVuMjVAZ21haWwuY29tIiwiaWF0IjoxNzUyNDcwMTM3LCJleHAiOjE3NTI0NzYxMzcsImRhdG9FeHRyYSI6MTIzNDU2fQ.Bq1RWFM2mhzlx-leC7NYxts53xqcP4sI9J0yEsfebZGkipsh9bjcjBOM60YG8PGyIFC8JlpSp0zRkczi3x0bVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Borrador\",\r\n    \"precio\": 1.0,\r\n    \"categoria\": \"Utiles\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIkFETUlOIl0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJpZCI6NSwidHlwZSI6ImFjY2VzcyIsImVuYWJsZWQiOnRydWUsImRuaSI6IjcwMzMwNDQ3IiwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwibm9tYnJlcyI6IkpoZXJzb24gQmVuaXRlcyIsInN1YiI6ImpoZXJzb24uYmVuMjVAZ21haWwuY29tIiwiaWF0IjoxNzUyNDcwMTM3LCJleHAiOjE3NTI0NzYxMzcsImRhdG9FeHRyYSI6MTIzNDU2fQ.Bq1RWFM2mhzlx-leC7NYxts53xqcP4sI9J0yEsfebZGkipsh9bjcjBOM60YG8PGyIFC8JlpSp0zRkczi3x0bVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Borrador\",\r\n    \"precio\": 0.70,\r\n    \"categoria\": \"Utiles\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIkFETUlOIl0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJpZCI6NSwidHlwZSI6ImFjY2VzcyIsImVuYWJsZWQiOnRydWUsImRuaSI6IjcwMzMwNDQ3IiwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwibm9tYnJlcyI6IkpoZXJzb24gQmVuaXRlcyIsInN1YiI6ImpoZXJzb24uYmVuMjVAZ21haWwuY29tIiwiaWF0IjoxNzUyNDcwMTM3LCJleHAiOjE3NTI0NzYxMzcsImRhdG9FeHRyYSI6MTIzNDU2fQ.Bq1RWFM2mhzlx-leC7NYxts53xqcP4sI9J0yEsfebZGkipsh9bjcjBOM60YG8PGyIFC8JlpSp0zRkczi3x0bVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Lapiz\",\r\n    \"precio\": 0.70,\r\n    \"categoria\": \"Utiles\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/actualizar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"actualizar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIkFETUlOIl0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJpZCI6NSwidHlwZSI6ImFjY2VzcyIsImVuYWJsZWQiOnRydWUsImRuaSI6IjcwMzMwNDQ3IiwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwibm9tYnJlcyI6IkpoZXJzb24gQmVuaXRlcyIsInN1YiI6ImpoZXJzb24uYmVuMjVAZ21haWwuY29tIiwiaWF0IjoxNzUyNDcwMTM3LCJleHAiOjE3NTI0NzYxMzcsImRhdG9FeHRyYSI6MTIzNDU2fQ.Bq1RWFM2mhzlx-leC7NYxts53xqcP4sI9J0yEsfebZGkipsh9bjcjBOM60YG8PGyIFC8JlpSp0zRkczi3x0bVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos/eliminar/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"eliminar",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ms Ordenes",
+					"item": [
+						{
+							"name": "Saludar",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIlNVUEVSQURNSU4iXSwiYWNjb3VudE5vbkV4cGlyZWQiOnRydWUsImlkIjo4LCJ0eXBlIjoiYWNjZXNzIiwiZW5hYmxlZCI6dHJ1ZSwiZG5pIjoiNzAzMzA0NDUiLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJub21icmVzIjoiTGlhbiBCZW5pdGVzIiwic3ViIjoibGlhbjE2QGdtYWlsLmNvbSIsImlhdCI6MTc1MjA0Mjk0NSwiZXhwIjoxNzUyMDQ4OTQ1LCJkYXRvRXh0cmEiOjEyMzQ1Nn0.cEPs6gfy4KwJkiSfIRFh3BgRnvQDQUgKdTRXf7TBqx2_b4I_haUvo-Bmm7x4dVyXW45ENM3NLN9OdVaAdWuP5Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Lapiz\",\r\n    \"precio\": 0.50,\r\n    \"categoria\": \"Utiles\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/ordenes/saludar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"ordenes",
+										"saludar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear  Orden",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIlVTVUFSSU8iXSwiYWNjb3VudE5vbkV4cGlyZWQiOnRydWUsImlkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZW5hYmxlZCI6dHJ1ZSwiZG5pIjoiNzAzMzA0NDgiLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJub21icmVzIjoiSm9yZ2UgQmVuaXRlcyIsInN1YiI6ImpvcmdlLmJlbjIzQGdtYWlsLmNvbSIsImlhdCI6MTc1MjQ3MDExMSwiZXhwIjoxNzUyNDc2MTExLCJkYXRvRXh0cmEiOjEyMzQ1Nn0.De3BONb7BCrKK2jkP6sy4i2cQvU9GQ5dbAYBDYCjNYy3yv-wC7YFePIAeNQwXR3XyiZSaKlLfzi9u87fx4KjHw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioId\": 1,\r\n    \"productosIds\": [2],\r\n    \"observaciones\": \"Entrega urgente por favor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/ordenes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"ordenes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Ordenes",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsInJvbGVzIjpbIlVTVUFSSU8iXSwiYWNjb3VudE5vbkV4cGlyZWQiOnRydWUsImlkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZW5hYmxlZCI6dHJ1ZSwiZG5pIjoiNzAzMzA0NDgiLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJub21icmVzIjoiSm9yZ2UgQmVuaXRlcyIsInN1YiI6ImpvcmdlLmJlbjIzQGdtYWlsLmNvbSIsImlhdCI6MTc1MjM3NTIzMywiZXhwIjoxNzUyMzgxMjMzLCJkYXRvRXh0cmEiOjEyMzQ1Nn0.jNk8zCIDFUD4H32r2ZWDvUqLCEF6pym4e0auVyOPw7ycOY3PAuvwakqsm5ZQCr921D-SuyRtTIuYKYwQ0ZHCuw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/ordenes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"ordenes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
